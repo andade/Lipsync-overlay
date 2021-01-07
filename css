@@ -1,0 +1,72 @@
+@keyframes fadeOut {
+0% {opacity:1;}
+100% {opacity:0;};
+animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;};
+animation-fill-mode: forwards;
+}
+
+
+#progress {
+  float: left;  /*Lieu dans le carré où se place la progress bar */
+  font-family: Karla, sans-serif;
+  font-size: 10px;
+  line-height: 5px; /*On en a pas besoin */
+  /*color: white;*/
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 480px;
+  align-items: center;
+  justify-content: flex-end; }
+  #progress label {
+    align-self: flex-end;
+    height: 20px;
+    padding: .7em 1em;
+    border-radius: 1.5em;
+    /*background: rgba(23, 23, 23, 0.6);*/
+    background: rgba(255, 0, 0, 1);
+    display: flex;
+    align-items: center; }
+  #progress #bar {
+    width: 94%;
+    /*height: 20px;*/
+    height:15px;
+    padding: .7em 1em;
+    border-radius: 1.5em;
+    /*background: rgba(23, 23, 23, 0.4);*/
+    background: rgba(11, 29, 43, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    flex-wrap: wrap; }
+    #progress #bar::before, #progress #bar .loading {
+      content: '';
+      background: rgba(23, 23, 23, 0.6);
+      /*background: rgba(255, 255 0, 0.1);*/
+      border-radius: 1.5em;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -2; }
+    #progress #bar .loading {
+      background: rgba(13, 166, 255, 0.9);
+      /*background: rgba(255, 255, 0, 0.1);*/
+      min-width: 0%;
+      width: 8%;
+      z-index: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      transition: 1.5s all ease-in-out; }
+      #progress #bar .loading .amount {
+        position: relative;
+        padding-right: 1em; }
