@@ -1,0 +1,25 @@
+{
+  "eventsLimit": {
+    "type": "number",
+    "label": "Limit displayed events to:",
+    "value": 5
+  },
+  "includeFollowers": {
+    "type": "dropdown",
+    "label": "Display followers:",
+    "value": "yes",
+    "options": {
+      "yes": "Yes",
+      "no": "No"
+    }
+  },
+  "includeRedemptions": {
+    "type": "dropdown",
+    "label": "Display redemptions:",
+    "value": "yes",
+    "options": {
+      "yes": "Yes",
+      "no": "No"
+    }
+  }
+}
